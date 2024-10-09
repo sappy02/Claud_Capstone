@@ -1,0 +1,19 @@
+.experience {
+    display: flex;
+    flex-direction: column;
+    padding: 2% 5%;
+}
+
+.experience-pic {
+    align-items: center;
+    max-width: 70%;
+    align-self: center;
+}
+ 
+.experience-title {
+    margin-bottom: 1%;
+}
+
+.experience-text {
+    margin-top: 0;
+}
