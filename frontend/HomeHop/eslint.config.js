@@ -1,38 +1,54 @@
-import js from '@eslint/js'
-import globals from 'globals'
-import react from 'eslint-plugin-react'
-import reactHooks from 'eslint-plugin-react-hooks'
-import reactRefresh from 'eslint-plugin-react-refresh'
+// ESLint configuration file for React projects
+// This configuration extends the recommended settings from the React, React Hooks, and React Refresh plugins
+// and adds custom rules for JSX and component exports.
 
+import { browser } from 'globals';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
+
+/**
+ * ESLint configuration
+ */
 export default [
+  // Ignore the dist directory
   { ignores: ['dist'] },
   {
+    // Files to lint (JS and JSX files)
     files: ['**/*.{js,jsx}'],
+    // Language options
     languageOptions: {
-      ecmaVersion: 2020,
-      globals: globals.browser,
+      // Use the latest ECMAScript version
+      ecmaVersion: 'latest',
+      // Define global variables (in this case, the browser object)
+      globals: { browser },
+      // Parser options
       parserOptions: {
-        ecmaVersion: 'latest',
+        // Enable JSX support
         ecmaFeatures: { jsx: true },
-        sourceType: 'module',
       },
     },
-    settings: { react: { version: '18.3' } },
-    plugins: {
+    // Plugins to use
+    plugins: [
       react,
-      'react-hooks': reactHooks,
-      'react-refresh': reactRefresh,
-    },
+      reactHooks,
+      reactRefresh,
+    ],
+    // Extend the recommended configurations from the plugins
+    extends: [
+      'plugin:react/recommended',
+      'plugin:react/jsx-runtime',
+      'plugin:react-hooks/recommended',
+    ],
+    // Custom rules
     rules: {
-      ...js.configs.recommended.rules,
-      ...react.configs.recommended.rules,
-      ...react.configs['jsx-runtime'].rules,
-      ...reactHooks.configs.recommended.rules,
+      // Disable the rule that warns about target="_blank" in JSX
       'react/jsx-no-target-blank': 'off',
+      // Warn about components that are not exported correctly
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true },
       ],
     },
   },
-]
+];

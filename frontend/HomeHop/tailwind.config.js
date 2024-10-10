@@ -1,10 +1,15 @@
-/** @type {import('tailwindcss').Config} */
+// https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.js
 module.exports = {
   content: [
+    "./index.html",
     "./src/**/*.{js,jsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'primary': '#007bff',
+      },  
+    },
   },
   plugins: [],
 }

@@ -3,10 +3,9 @@ import AccountNav from '../AccountNav';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import PlaceImg from '../PlaceImg';
-// Removed the PlacesForm import since it's not used
 
-export default function Places() {
-  const [places, setPlaces] = useState([]); // Removed type annotation
+function Places() {
+  const [places, setPlaces] = useState([]);
 
   useEffect(() => {
     axios.get('/user-places').then(({ data }) => {
@@ -41,3 +40,5 @@ export default function Places() {
     </div>
   );
 }
+
+export default Places;

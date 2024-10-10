@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import AccountNav from "../AccountNav";
+import AccountNav from "../accountNav";
 import axios from "axios";
 import PlaceImg from "../PlaceImg";
 import { Link } from "react-router-dom";
