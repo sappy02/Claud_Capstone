@@ -1,17 +1,21 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
-import IndexP from './pages/IndexP';
-import LoginP from './pages/LoginP';
-import Layout from './containers/layout';
-import RegisterP from './pages/RegisterP';
 import axios from 'axios';
 import { UserContextProvider } from './UserContext';
+
+// page components
+import IndexP from './pages/IndexP';
+import LoginP from './pages/LoginP';
+import RegisterP from './pages/RegisterP';
 import ProfileP from './pages/ProfileP';
 import PlacesP from './pages/PlacesP';
 import PlacesFormP from './pages/PlacesFormP';
 import PlaceP from './pages/PlaceP';
 import BookingsP from './pages/BookingsP';
 import BookingP from './pages/BookingP';
+
+// layout component
+import Layout from './containers/layout';
 
 axios.defaults.baseURL = 'http://localhost:4000';
 axios.defaults.withCredentials = true;
