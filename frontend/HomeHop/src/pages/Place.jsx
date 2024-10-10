@@ -38,7 +38,7 @@ function Place() {
             <b>Max number of guests:</b> {place.maxGuests}
           </div>
           <div>
-            <BookingWidjet place={place} />
+            <BookingWidget place={place} />
           </div>
         </div>
         <div className="bg-white px-8 py-8 border-t">
