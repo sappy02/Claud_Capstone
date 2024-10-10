@@ -1,4 +1,5 @@
-import { Place } from "./pages/PlacesPage";
+import { PlacesP } from "../pages/PlacesP";
+import React from "react";
 
 function PlaceImg({ place, index = 0, className = '' }) {
   // Check if there are no photos

@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-function Booking() {
+function BookingP() {
   const { id } = useParams();
   const [booking, setBooking] = useState(null);
 
@@ -41,4 +41,4 @@ function Booking() {
   );
 }
 
-export default Booking;
+export default BookingP;

@@ -15,7 +15,7 @@ import BookingsP from './pages/BookingsP';
 import BookingP from './pages/BookingP';
 
 // layout component
-import Layout from './containers/layout';
+import Layout from './containers/Layout';
 
 axios.defaults.baseURL = 'http://localhost:4000';
 axios.defaults.withCredentials = true;

@@ -1,11 +1,11 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import BookingWidget from "../pages/bookingWidget";
-import PlaceGallery from "../PlaceGallery";
-import AddressLink from "../AddressLink";
+import BookingWidget from "../components/bookingWidget";
+import PlaceGallery from "../components/placeGallery";
+import AddressLink from "../components/addressLink";
 
-function Place() {
+function PlaceP() {
   const { id } = useParams();
   const [place, setPlace] = useState(null);
 
@@ -52,4 +52,4 @@ function Place() {
   );
 }
 
-export default Place;
+export default PlaceP;

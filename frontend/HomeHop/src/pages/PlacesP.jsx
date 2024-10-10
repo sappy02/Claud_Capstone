@@ -1,15 +1,18 @@
 import { Link } from 'react-router-dom';
-import AccountNav from '../AccountNav';
+import AccountNav from '../components/AccountNav';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import PlaceImg from '../PlaceImg';
+import PlaceImg from '../components/placeImg';
 
-function PlacesPage() {
+function PlacesP() {
   const [places, setPlaces] = useState([]);
 
   useEffect(() => {
-    axios.get('/user-places').then(({ data }) => {
-      setPlaces(data);
+    axios.get('/user-places').then(({ data }) => 
+      setPlaces(data))
+      .catch(error => {
+        console.error('Failed to fetch places', error);
+        // Set an error state to display to the user
     });
   }, []);
 
@@ -41,4 +44,4 @@ function PlacesPage() {
   );
 }
 
-export default PlacesPage;
+export default PlacesP;

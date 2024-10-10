@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { Place } from "../pages/PlacesP";
+import { PlacesP } from "../pages/PlacesP";
 
 export default function AddressLink({ place, className }) {
     return (

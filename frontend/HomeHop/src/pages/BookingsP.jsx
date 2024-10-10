@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import AccountNav from "../accountNav";
+import AccountNav from "../components/AccountNav";
 import axios from "axios";
-import PlaceImg from "../PlaceImg";
+import PlaceImg from "../components/placeImg";
 import { Link } from "react-router-dom";
-import BookingDate from "../BookingDate";
+import BookingDate from "../components/BookingDate";
 
-function Bookings() {
+function BookingsP() {
   const [bookings, setBookings] = useState([]);
 
   useEffect(() => {
@@ -43,4 +43,4 @@ function Bookings() {
   );
 }
 
-export default Bookings;
+export default BookingsP;

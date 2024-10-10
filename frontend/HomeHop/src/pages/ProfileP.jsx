@@ -1,11 +1,11 @@
 import axios from "axios";
 import { useContext } from "react";
-import { UserContext } from "../UserContext";
+import { UserContext } from "../contexts/UserContext";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
 import PlacesPage from "./PlacesP";
-import AccountNav from "../AccountNav";
+import AccountNav from "../components/AccountNav";
 
-function Profile() {
+function ProfileP() {
   const { user, setUser, ready } = useContext(UserContext);
   const navigate = useNavigate();
 
@@ -50,4 +50,4 @@ function Profile() {
   );
 }
 
-export default Profile;
+export default ProfileP;

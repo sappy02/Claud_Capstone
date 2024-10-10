@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const app = express();
 const propertyRoutes = require('./routes/propertyR');
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 const cors = require('cors');
 const path = require('path');
 const cookieParser = require('cookie-parser');

@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import Perks from "../Perks";
-import PhotosUploader from "../PhotosUploader";
+import Perks from "../components/perks";
+import PhotosUploader from "../components/photosUploader";
 import axios from "axios";
-import AccountNav from "../AccountNav";
+import AccountNav from "../components/AccountNav";
 import { Navigate, useParams } from "react-router-dom";
 
-function PlacesForm() {
+function PlacesFormP() {
   const { id } = useParams();
   const [title, setTitle] = useState("");
   const [address, setAddress] = useState("");
@@ -148,4 +148,4 @@ function PreInput({ header, description }) {
   );
 }
 
-export default PlacesForm;
+export default PlacesFormP;
