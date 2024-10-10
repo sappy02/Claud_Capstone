@@ -6,7 +6,7 @@ const MongoClient = require('mongodb').MongoClient;
 const DB_URL = 'mongodb+srv://claudiucornetti:Deloitte12@cluster0.t2gog.mongodb.net/sample_airbnb?retryWrites=true&w=majority';
 
 router.get('/airbnb-data', async (req, res) => {
-  const client = new MongoClient(DB_URL, { useNewUrlParser: true, useUnifiedTopology: true });
+  const client = new MongoClient(DB_URL);
 
   try {
     await client.connect();
