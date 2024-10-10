@@ -3,7 +3,7 @@ import { useContext, useState } from "react";
 import { Link, Navigate } from "react-router-dom";
 import { UserContext } from "../UserContext";
 
-function Login() {
+function LoginP() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [redirect, setRedirect] = useState(false);
@@ -46,4 +46,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default LoginP;

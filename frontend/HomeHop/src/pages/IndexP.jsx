@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-function Index() {
+function IndexP() {
   const [places, setPlaces] = useState([]);
 
   useEffect(() => {
@@ -34,4 +34,4 @@ function Index() {
   );
 }
 
-export default Index;
+export default IndexP;
