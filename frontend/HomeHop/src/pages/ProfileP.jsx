@@ -2,12 +2,11 @@ import axios from "axios";
 import { useContext } from "react";
 import { UserContext } from "../UserContext";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
-import PlacesPage from "./PlacesPage";
+import PlacesPage from "./PlacesP";
 import AccountNav from "../AccountNav";
 
 function Profile() {
   const { user, setUser, ready } = useContext(UserContext);
-
   const navigate = useNavigate();
 
   let { subpage } = useParams();
@@ -20,17 +19,17 @@ function Profile() {
   }
 
   async function logout() {
-    try{
-    await axios.post("/logout");
-    navigate("/");
-    setUser(undefined);
-  } catch (error) {
-    console.error("Logout failed:", error); // Handle any errors
+    try {
+      await axios.post("/logout");
+      navigate("/");
+      setUser(null); // Changed to null as undefined might not be expected in all contexts
+    } catch (error) {
+      console.error("Logout failed:", error);
+    }
   }
-}
 
   if (ready && !user) {
-    return <Navigate to={"/login"} />;
+    return <Navigate to="/login" />;
   }
 
   return (

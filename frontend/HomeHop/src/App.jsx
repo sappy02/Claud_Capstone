@@ -1,7 +1,7 @@
-import './App.css';
+import './styles/App.css';
 import { Route, Routes } from 'react-router-dom';
 import axios from 'axios';
-import { UserContextProvider } from './UserContext';
+import { UserContextProvider } from './contexts/UserContext';
 
 // page components
 import IndexP from './pages/IndexP';

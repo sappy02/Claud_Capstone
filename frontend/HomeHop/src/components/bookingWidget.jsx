@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { Place } from "./pages/PlacesP";
+import { Place } from "../pages/PlacesP";
 import { differenceInCalendarDays } from "date-fns";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
